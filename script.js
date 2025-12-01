@@ -70,6 +70,23 @@ const projects = [
     github: 'https://github.com/MutshidziPhaswana/graphql-server',
     demo: null
   }
+  ,
+  {
+    title: 'Web Performance Study',
+    description: 'Empirical analysis of web app performance in resource-constrained environments.',
+    tags: ['Research', 'Performance', 'Accessibility'],
+    category: 'research',
+    github: null,
+    demo: null
+  },
+  {
+    title: 'Accessibility Audit Framework',
+    description: 'Methodology and tooling for WCAG-compliant frontend development.',
+    tags: ['Research', 'WCAG', 'Tooling'],
+    category: 'research',
+    github: 'https://github.com/MutshidziPhaswana/a11y-audit-framework',
+    demo: null
+  }
 ];
 
 // Render Projects
@@ -114,6 +131,13 @@ function renderProjects(filter = 'all') {
 
 // Initial render
 renderProjects();
+
+// Populate research grid with research-only items
+const researchGrid = document.getElementById('researchGrid');
+if (researchGrid) {
+  const researchItems = projects.filter(p => p.category === 'research');
+  researchItems.forEach(item => researchGrid.appendChild(createProjectCard(item)));
+}
 
 // Filter Projects
 const filterButtons = document.querySelectorAll('.filters button');
