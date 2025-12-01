@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <title>Mutshidzi Phaswana | Engineer & AI/ML Researcher (MSc)</title>
@@ -11,9 +11,26 @@
   <meta property="og:url" content="https://MutshidziPhaswana.github.io">
   <meta property="og:image" content="assets/og-preview.png">
   <link rel="canonical" href="https://MutshidziPhaswana.github.io">
-  <link rel="stylesheet" href="styles.css">
-  <!-- Tailwind CSS (Play CDN for rapid styling; replace with build pipeline later for production optimization) -->
+  
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#3b82f6',
+            secondary: '#64748b',
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  
   <script defer src="script.js"></script>
   <script type="application/ld+json">
   {
@@ -31,96 +48,135 @@
     ]
   }
   </script>
+  <style>
+    /* Custom scrollbar for Webkit */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      background-color: #cbd5e1;
+      border-radius: 20px;
+    }
+    .dark ::-webkit-scrollbar-thumb {
+      background-color: #475569;
+    }
+  </style>
 </head>
-<body>
-<header class="site-header">
-  <nav class="nav">
-    <a class="logo" href="/" aria-label="Home">MP</a>
-    <button id="themeToggle" aria-label="Toggle dark mode">🌓</button>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#research">Research</a></li>
-      <li><a href="#publications">Publications</a></li>
-      <li><a href="#awards">Honors</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#skills">Skills</a></li>
-    </ul>
-  </nav>
-  <section class="hero" id="hero">
-    <div class="hero-content">
-      <h1>Hi, I'm <span class="accent">Mutshidzi Phaswana</span></h1>
-      <p class="lead">
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-900 dark:text-slate-100 transition-colors duration-300 antialiased">
+
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 transition-colors duration-300">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+    <a href="/" class="text-xl font-bold tracking-tight hover:text-blue-600 dark:hover:text-blue-400 transition-colors" aria-label="Home">MP</a>
+    
+    <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600 dark:text-slate-400">
+      <a href="#about" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">About</a>
+      <a href="#experience" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Experience</a>
+      <a href="#research" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Research</a>
+      <a href="#publications" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Publications</a>
+      <a href="#education" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Education</a>
+    </nav>
+
+    <button id="themeToggle" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" aria-label="Toggle dark mode">
+      <!-- Icon handled by JS -->
+      <span class="text-xl">🌓</span>
+    </button>
+  </div>
+</header>
+
+<main class="pt-24 pb-16 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto space-y-24">
+
+  <!-- Hero Section -->
+  <section id="hero" class="flex flex-col-reverse md:flex-row items-center gap-12 py-12 md:py-20">
+    <div class="flex-1 space-y-6 text-center md:text-left">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight">
+        Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 dark:from-blue-400 dark:to-cyan-300">Mutshidzi Phaswana</span>
+      </h1>
+      <p class="text-lg md:text-xl text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl mx-auto md:mx-0">
         Engineer @ Sanlam Fintech & MSc AI/ML researcher (UJ). I build distributed and ML-driven systems
         and study curriculum strategies for contrastive self-supervised learning.
       </p>
-      <div class="cta-group">
-        <a href="#experience" class="btn primary">Experience</a>
-        <a href="#research" class="btn outline">Research</a>
-        <a href="#publications" class="btn outline">Publications</a>
+      <div class="flex flex-wrap justify-center md:justify-start gap-4 pt-4">
+        <a href="#experience" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-lg shadow-blue-500/30 transition-all hover:-translate-y-0.5">
+          Experience
+        </a>
+        <a href="#research" class="px-6 py-3 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-blue-500 dark:hover:border-blue-400 text-slate-700 dark:text-slate-200 font-semibold rounded-lg transition-all hover:-translate-y-0.5">
+          Research
+        </a>
       </div>
-      <div class="social">
-        <a href="https://github.com/MutshidziPhaswana">GitHub</a>
-        <a href="https://www.linkedin.com/in/mutshidzi-phaswana-01165a316">LinkedIn</a>
-        <a href="mailto:phaswanamutshidzi216@gmail.com">Email</a>
+      <div class="flex justify-center md:justify-start gap-6 pt-4 text-slate-500 dark:text-slate-400">
+        <a href="https://github.com/MutshidziPhaswana" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors" aria-label="GitHub">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/mutshidzi-phaswana-01165a316" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors" aria-label="LinkedIn">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd"></path></svg>
+        </a>
+        <a href="mailto:phaswanamutshidzi216@gmail.com" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors" aria-label="Email">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+        </a>
       </div>
     </div>
-    <picture>
-      <img src="assets/profile.jpg" alt="Portrait of Mutshidzi Phaswana" width="260" height="260" loading="lazy">
-    </picture>
-  </section>
-</header>
-
-<main id="main-content">
-  <section id="about" class="panel">
-    <h2>About</h2>
-    <p>
-      Backend-focused engineer working across cloud platforms, distributed systems, and ML infrastructure.
-      I care about building scalable, cost-efficient services that bridge data science and software engineering.
-    </p>
-    <p>
-      As an MSc AI/ML researcher, I work on curriculum learning for contrastive self-supervised methods,
-      with broader interests in representation learning, planning, and intelligent training strategies.
-      I am also published in lightweight cryptography, HCI, and agricultural wireless sensor networks.
-    </p>
+    <div class="relative group">
+      <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+      <img src="assets/profile.jpg" alt="Mutshidzi Phaswana" class="relative w-48 h-48 md:w-64 md:h-64 rounded-full object-cover border-4 border-white dark:border-slate-800 shadow-2xl">
+    </div>
   </section>
 
-  <section id="experience" class="panel">
-    <h2>Experience</h2>
-    <div class="relative pl-6 sm:pl-8">
-      <!-- Vertical line -->
-      <div class="absolute top-0 left-2 sm:left-3 h-full w-px bg-gradient-to-b from-blue-500/60 via-blue-400/40 to-transparent"></div>
+  <!-- About Section -->
+  <section id="about" class="scroll-mt-24">
+    <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
+      <span class="text-blue-600 dark:text-blue-400">01.</span> About
+    </h2>
+    <div class="bg-white dark:bg-slate-800/50 rounded-2xl p-6 md:p-8 shadow-sm border border-slate-100 dark:border-slate-700/50">
+      <p class="text-lg text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
+        Backend-focused engineer working across cloud platforms, distributed systems, and ML infrastructure.
+        I care about building scalable, cost-efficient services that bridge data science and software engineering.
+      </p>
+      <p class="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
+        As an MSc AI/ML researcher, I work on curriculum learning for contrastive self-supervised methods,
+        with broader interests in representation learning, planning, and intelligent training strategies.
+        I am also published in lightweight cryptography, HCI, and agricultural wireless sensor networks.
+      </p>
+    </div>
+  </section>
 
+  <!-- Experience Section -->
+  <section id="experience" class="scroll-mt-24">
+    <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
+      <span class="text-blue-600 dark:text-blue-400">02.</span> Experience
+    </h2>
+    <div class="relative pl-6 sm:pl-8 border-l border-slate-200 dark:border-slate-700 ml-3 md:ml-4 space-y-12">
+      
       <!-- Item 1 -->
-      <article class="group mb-12">
-        <div class="flex items-start gap-4">
-          <div class="mt-1 h-4 w-4 rounded-full bg-blue-500 ring-4 ring-blue-500/20 group-hover:scale-110 transition"></div>
-          <div>
-            <h3 class="text-xl font-semibold">Junior Engineer — Sanlam Fintech</h3>
-            <p class="text-sm text-slate-500 dark:text-slate-400">Feb 2025 – Present · Johannesburg · Hybrid</p>
-          </div>
+      <article class="relative group">
+        <div class="absolute -left-[37px] sm:-left-[41px] top-1 h-5 w-5 rounded-full border-4 border-white dark:border-slate-900 bg-blue-500 group-hover:scale-110 transition-transform"></div>
+        <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between mb-2">
+          <h3 class="text-xl font-bold text-slate-900 dark:text-white">Junior Engineer — Sanlam Fintech</h3>
+          <span class="text-sm font-mono text-slate-500 dark:text-slate-400">Feb 2025 – Present</span>
         </div>
-        <p class="mt-3 text-slate-600 dark:text-slate-300 max-w-prose">Bridge data science & engineering: personalization, experimentation, model lifecycle, scalable delivery.</p>
-        <ul class="mt-3 space-y-1 text-sm text-slate-600 dark:text-slate-300 list-disc list-inside">
+        <p class="text-sm text-slate-500 dark:text-slate-400 mb-4">Johannesburg · Hybrid</p>
+        <p class="text-slate-700 dark:text-slate-300 mb-4">Bridge data science & engineering: personalization, experimentation, model lifecycle, scalable delivery.</p>
+        <ul class="list-disc list-outside ml-4 space-y-2 text-slate-600 dark:text-slate-400 text-sm">
           <li>Build services powering personalization & experimentation.</li>
           <li>Support reliable model deployment & lifecycle management.</li>
           <li>Improve API/infrastructure scalability & cost efficiency.</li>
           <li>Collaborate with data scientists for observable production systems.</li>
-          <li>Tech: Python · Java · Cloud · Infra as Code · CI/CD.</li>
+          <li><strong class="text-slate-700 dark:text-slate-300">Tech:</strong> Python · Java · Cloud · Infra as Code · CI/CD.</li>
         </ul>
       </article>
 
       <!-- Item 2 -->
-      <article class="group mb-12">
-        <div class="flex items-start gap-4">
-          <div class="mt-1 h-4 w-4 rounded-full bg-blue-500 ring-4 ring-blue-500/20 group-hover:scale-110 transition"></div>
-          <div>
-            <h3 class="text-xl font-semibold">Junior Developer — Impression Signatures</h3>
-            <p class="text-sm text-slate-500 dark:text-slate-400">Sep 2023 – Jan 2025 · Johannesburg · Hybrid</p>
-          </div>
+      <article class="relative group">
+        <div class="absolute -left-[37px] sm:-left-[41px] top-1 h-5 w-5 rounded-full border-4 border-white dark:border-slate-900 bg-slate-300 dark:bg-slate-600 group-hover:bg-blue-500 transition-colors"></div>
+        <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between mb-2">
+          <h3 class="text-xl font-bold text-slate-900 dark:text-white">Junior Developer — Impression Signatures</h3>
+          <span class="text-sm font-mono text-slate-500 dark:text-slate-400">Sep 2023 – Jan 2025</span>
         </div>
-        <p class="mt-3 text-slate-600 dark:text-slate-300 max-w-prose">Managed PKI & secure digital signing systems in regulated environments.</p>
-        <ul class="mt-3 space-y-1 text-sm text-slate-600 dark:text-slate-300 list-disc list-inside">
+        <p class="text-sm text-slate-500 dark:text-slate-400 mb-4">Johannesburg · Hybrid</p>
+        <p class="text-slate-700 dark:text-slate-300 mb-4">Managed PKI & secure digital signing systems in regulated environments.</p>
+        <ul class="list-disc list-outside ml-4 space-y-2 text-slate-600 dark:text-slate-400 text-sm">
           <li>Maintained Certificate & Registration Authority systems.</li>
           <li>Participated in audit preparation & execution.</li>
           <li>Provisioned secure infrastructure (Python · Cloud · IaC).</li>
@@ -128,16 +184,15 @@
       </article>
 
       <!-- Item 3 -->
-      <article class="group mb-4">
-        <div class="flex items-start gap-4">
-          <div class="mt-1 h-4 w-4 rounded-full bg-blue-500 ring-4 ring-blue-500/20 group-hover:scale-110 transition"></div>
-          <div>
-            <h3 class="text-xl font-semibold">Software Engineer — Synthesis Software Technologies</h3>
-            <p class="text-sm text-slate-500 dark:text-slate-400">Jan 2022 – Aug 2023 · Johannesburg · Hybrid</p>
-          </div>
+      <article class="relative group">
+        <div class="absolute -left-[37px] sm:-left-[41px] top-1 h-5 w-5 rounded-full border-4 border-white dark:border-slate-900 bg-slate-300 dark:bg-slate-600 group-hover:bg-blue-500 transition-colors"></div>
+        <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between mb-2">
+          <h3 class="text-xl font-bold text-slate-900 dark:text-white">Software Engineer — Synthesis Software Technologies</h3>
+          <span class="text-sm font-mono text-slate-500 dark:text-slate-400">Jan 2022 – Aug 2023</span>
         </div>
-        <p class="mt-3 text-slate-600 dark:text-slate-300 max-w-prose">Contract & container management platform for international shipping operations.</p>
-        <ul class="mt-3 space-y-1 text-sm text-slate-600 dark:text-slate-300 list-disc list-inside">
+        <p class="text-sm text-slate-500 dark:text-slate-400 mb-4">Johannesburg · Hybrid</p>
+        <p class="text-slate-700 dark:text-slate-300 mb-4">Contract & container management platform for international shipping operations.</p>
+        <ul class="list-disc list-outside ml-4 space-y-2 text-slate-600 dark:text-slate-400 text-sm">
           <li>Built microservices (.NET Core) for contract/container flows.</li>
           <li>Developed Vue.js UI components & interactions.</li>
           <li>Implemented Kafka event producers & consumers.</li>
@@ -146,94 +201,157 @@
     </div>
   </section>
 
-  <section id="research" class="panel">
-    <h2>Research</h2>
-    <p>
-      My MSc research focuses on agents that can <strong>teach themselves to improve representation learning</strong>.
-      I explore automated curriculum learning for self-supervised methods like SimCLR, developing teacher–student
-      frameworks that adaptively plan training sequences to maximise the quality and generality of learned representations.
+  <!-- Research Section -->
+  <section id="research" class="scroll-mt-24">
+    <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
+      <span class="text-blue-600 dark:text-blue-400">03.</span> Research
+    </h2>
+    <div class="bg-white dark:bg-slate-800/50 rounded-2xl p-6 md:p-8 shadow-sm border border-slate-100 dark:border-slate-700/50">
+      <p class="text-lg text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
+        My MSc research focuses on agents that can <strong class="text-blue-600 dark:text-blue-400">teach themselves to improve representation learning</strong>.
+        I explore automated curriculum learning for self-supervised methods like SimCLR, developing teacher–student
+        frameworks that adaptively plan training sequences to maximise the quality and generality of learned representations.
+      </p>
+      <p class="text-lg text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
+        These agents use structured, model-based planning to guide learning, moving beyond pure trial-and-error updates
+        toward more reliable, informed decision-making.
+      </p>
+      <p class="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
+        Outside SSL, I’ve also worked on applying lightweight cryptography and HCI principles to agricultural wireless
+        sensor networks, with a focus on usability and security in resource-constrained environments.
+      </p>
+    </div>
+  </section>
+
+  <!-- Publications Section -->
+  <section id="publications" class="scroll-mt-24">
+    <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
+      <span class="text-blue-600 dark:text-blue-400">04.</span> Publications
+    </h2>
+    <div class="grid gap-6">
+      <div class="p-6 rounded-xl bg-white dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700/50 hover:border-blue-500 dark:hover:border-blue-400 transition-colors">
+        <h3 class="text-lg font-bold mb-2">Integrating Lightweight Cryptography with Human-Computer Interaction Principles in Agricultural Wireless Sensor Networks</h3>
+        <p class="text-slate-500 dark:text-slate-400 text-sm mb-3">IHW 2025 · Mutshidzi Phaswana, Khutso Lebea</p>
+        <a href="https://dl.acm.org/doi/10.1007/978-3-031-93064-5_8" target="_blank" rel="noopener" class="inline-flex items-center text-blue-600 dark:text-blue-400 hover:underline text-sm font-medium">
+          Read Paper <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+        </a>
+      </div>
+      <div class="p-6 rounded-xl bg-white dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700/50 hover:border-blue-500 dark:hover:border-blue-400 transition-colors">
+        <h3 class="text-lg font-bold mb-2">Automated Curriculum for Contrastive Self-Supervised Learning</h3>
+        <p class="text-slate-500 dark:text-slate-400 text-sm">MSc Thesis (in progress) · University of Johannesburg</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Honors Section -->
+  <section id="awards" class="scroll-mt-24">
+    <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
+      <span class="text-blue-600 dark:text-blue-400">05.</span> Honors
+    </h2>
+    <div class="space-y-4">
+      <div class="flex items-start gap-4 p-4 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+        <span class="text-2xl">🏆</span>
+        <div>
+          <h3 class="font-bold">Valkey Build Challenge Winner</h3>
+          <p class="text-slate-600 dark:text-slate-400 text-sm">PyCon Africa 2025</p>
+        </div>
+      </div>
+      <div class="flex items-start gap-4 p-4 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+        <span class="text-2xl">🥉</span>
+        <div>
+          <h3 class="font-bold">Top 3 Best Third-Year Website</h3>
+          <p class="text-slate-600 dark:text-slate-400 text-sm">University of Johannesburg (PAKA platform, 2021)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="scroll-mt-24">
+    <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
+      <span class="text-blue-600 dark:text-blue-400">06.</span> Education
+    </h2>
+    <div class="space-y-8">
+      <div>
+        <div class="flex justify-between items-baseline mb-2">
+          <h3 class="text-xl font-bold">MSc Computer Science (Research)</h3>
+          <span class="text-sm font-mono text-slate-500 dark:text-slate-400">2025–2026</span>
+        </div>
+        <p class="text-blue-600 dark:text-blue-400 mb-2">University of Johannesburg</p>
+        <p class="text-slate-600 dark:text-slate-300 text-sm">Focus: automated curriculum learning for self-supervised representation learning; teacher–student agents that plan training sequences using structured, model-based reasoning.</p>
+      </div>
+      <div>
+        <div class="flex justify-between items-baseline mb-2">
+          <h3 class="text-xl font-bold">BSc Hons Computer Science</h3>
+          <span class="text-sm font-mono text-slate-500 dark:text-slate-400">2023–2024</span>
+        </div>
+        <p class="text-blue-600 dark:text-blue-400">University of Johannesburg</p>
+      </div>
+      <div>
+        <div class="flex justify-between items-baseline mb-2">
+          <h3 class="text-xl font-bold">BSc Information Technology</h3>
+          <span class="text-sm font-mono text-slate-500 dark:text-slate-400">2018–2021</span>
+        </div>
+        <p class="text-blue-600 dark:text-blue-400">University of Johannesburg</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="scroll-mt-24">
+    <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
+      <span class="text-blue-600 dark:text-blue-400">07.</span> Skills
+    </h2>
+    <div class="flex flex-wrap gap-3">
+      <span class="px-4 py-2 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-full text-sm font-medium">Java</span>
+      <span class="px-4 py-2 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-full text-sm font-medium">Python</span>
+      <span class="px-4 py-2 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-full text-sm font-medium">TypeScript</span>
+      <span class="px-4 py-2 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-full text-sm font-medium">Cloud architecture (AWS)</span>
+      <span class="px-4 py-2 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-full text-sm font-medium">Distributed Systems</span>
+      <span class="px-4 py-2 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-full text-sm font-medium">API Design</span>
+      <span class="px-4 py-2 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-full text-sm font-medium">ML Infrastructure</span>
+      <span class="px-4 py-2 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-full text-sm font-medium">Terraform</span>
+      <span class="px-4 py-2 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-full text-sm font-medium">Docker</span>
+      <span class="px-4 py-2 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-full text-sm font-medium">Kafka</span>
+      <span class="px-4 py-2 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-full text-sm font-medium">PyTorch</span>
+      <span class="px-4 py-2 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-full text-sm font-medium">Contrastive & RL</span>
+      <span class="px-4 py-2 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-full text-sm font-medium">Cryptography</span>
+      <span class="px-4 py-2 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-full text-sm font-medium">IoT</span>
+      <span class="px-4 py-2 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-full text-sm font-medium">Observability</span>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="scroll-mt-24 max-w-2xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-6">Get In Touch</h2>
+    <p class="text-slate-600 dark:text-slate-300 mb-8">
+      Collaboration or inquiry? Drop a message.
     </p>
-    <p>
-      These agents use structured, model-based planning to guide learning, moving beyond pure trial-and-error updates
-      toward more reliable, informed decision-making.
-    </p>
-    <p>
-      Outside SSL, I’ve also worked on applying lightweight cryptography and HCI principles to agricultural wireless
-      sensor networks, with a focus on usability and security in resource-constrained environments.
-    </p>
-  </section>
-
-  <section id="publications" class="panel">
-    <h2>Publications</h2>
-    <ul class="skills">
-      <li>
-        <strong>Integrating Lightweight Cryptography with Human-Computer Interaction Principles in Agricultural Wireless Sensor Networks</strong>
-        (IHW 2025)<br>
-        <em>Mutshidzi Phaswana, Khutso Lebea</em> ·
-        <a href="https://dl.acm.org/doi/10.1007/978-3-031-93064-5_8" target="_blank" rel="noopener">Paper</a>
-      </li>
-      <li>
-        <strong>Automated Curriculum for Contrastive Self-Supervised Learning</strong><br>
-        MSc Thesis (in progress), University of Johannesburg.
-      </li>
-    </ul>
-  </section>
-
-  <section id="awards" class="panel">
-    <h2>Honors</h2>
-    <ul class="skills">
-      <li><strong>Valkey Build Challenge Winner</strong> — PyCon Africa 2025</li>
-      <li><strong>Top 3 Best Third-Year Website</strong> — University of Johannesburg (PAKA platform, 2021)</li>
-    </ul>
-  </section>
-
-  <section id="education" class="panel">
-    <h2>Education</h2>
-    <ul class="skills">
-      <li>
-        <strong>MSc Computer Science (Research)</strong> — University of Johannesburg (2025–2026)<br>
-        Focus: automated curriculum learning for self-supervised representation learning; teacher–student
-        agents that plan training sequences using structured, model-based reasoning.
-      </li>
-      <li>
-        <strong>BSc Hons Computer Science</strong> — University of Johannesburg (2023–2024)
-      </li>
-      <li>
-        <strong>BSc Information Technology</strong> — University of Johannesburg (2018–2021)
-      </li>
-    </ul>
-  </section>
-
-  
-
-  <section id="skills" class="panel">
-    <h2>Skills</h2>
-    <ul class="skills">
-      <li>Java · Python · TypeScript</li>
-      <li>Cloud architecture (AWS) & platform services</li>
-      <li>Distributed Systems · API Design · ML Infrastructure</li>
-      <li>Terraform · Docker · Kafka</li>
-      <li>PyTorch · Contrastive & RL</li>
-      <li>Cryptography · IoT · Observability</li>
-    </ul>
-  </section>
-
-  <section id="contact" class="panel">
-    <h2>Contact</h2>
-    <p>Collaboration or inquiry? Drop a message.</p>
-    <form id="contactForm" action="https://formspree.io/f/TODO" method="POST">
-      <label><span>Name</span><input name="name" required></label>
-      <label><span>Email</span><input type="email" name="email" required></label>
-      <label><span>Message</span><textarea name="message" rows="5" required></textarea></label>
-      <button type="submit" class="btn primary">Send</button>
-      <p class="form-status" aria-live="polite"></p>
+    <form id="contactForm" action="https://formspree.io/f/TODO" method="POST" class="space-y-4 text-left">
+      <div>
+        <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Name</label>
+        <input name="name" required class="w-full px-4 py-2 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all">
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Email</label>
+        <input type="email" name="email" required class="w-full px-4 py-2 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all">
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Message</label>
+        <textarea name="message" rows="5" required class="w-full px-4 py-2 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"></textarea>
+      </div>
+      <button type="submit" class="w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-lg shadow-blue-500/30 transition-all hover:-translate-y-0.5">
+        Send Message
+      </button>
+      <p class="form-status text-center text-sm mt-4" aria-live="polite"></p>
     </form>
   </section>
 
 </main>
 
-<footer class="site-footer">
+<footer class="py-8 text-center text-slate-500 dark:text-slate-400 text-sm border-t border-slate-200 dark:border-slate-800">
   <p>&copy; <span id="year"></span> Mutshidzi Phaswana. All rights reserved.</p>
 </footer>
+
 </body>
 </html>
