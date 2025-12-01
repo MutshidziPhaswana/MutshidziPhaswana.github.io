@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="260" height="260" viewBox="0 0 260 260">
+  <rect width="260" height="260" fill="#2563eb"/>
+  <circle cx="130" cy="100" r="40" fill="#ffffff"/>
+  <path d="M70 180 Q130 150 190 180 L190 260 L70 260 Z" fill="#ffffff"/>
+  <text x="130" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#2563eb">MP</text>
+</svg>

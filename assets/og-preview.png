@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0f172a"/>
+  <text x="600" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="80" font-weight="bold" fill="#3b82f6">Mutshidzi Phaswana</text>
+  <text x="600" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="40" fill="#94a3b8">Software Developer</text>
+  <text x="600" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#64748b">Building reliable, accessible, and performant web applications</text>
+  <circle cx="600" cy="520" r="8" fill="#3b82f6"/>
+  <circle cx="630" cy="520" r="8" fill="#3b82f6"/>
+  <circle cx="660" cy="520" r="8" fill="#3b82f6"/>
+</svg>
