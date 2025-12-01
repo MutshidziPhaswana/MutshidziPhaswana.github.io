@@ -12,6 +12,8 @@
   <meta property="og:image" content="assets/og-preview.png">
   <link rel="canonical" href="https://MutshidziPhaswana.github.io">
   <link rel="stylesheet" href="styles.css">
+  <!-- Tailwind CSS (Play CDN for rapid styling; replace with build pipeline later for production optimization) -->
+  <script src="https://cdn.tailwindcss.com"></script>
   <script defer src="script.js"></script>
   <script type="application/ld+json">
   {
@@ -85,56 +87,63 @@
 
   <section id="experience" class="panel">
     <h2>Experience</h2>
-    <ol class="timeline">
-      <li>
-        <div class="time">Feb 2025 – Present</div>
-        <div class="details">
-          <h3>Junior Engineer — Sanlam Fintech</h3>
-          <p>City of Johannesburg, Gauteng, South Africa · Hybrid</p>
-          <p>
-            Building and productionizing data integrations and ML products, acting as a bridge between data science
-            and software engineering. Focused on personalization, experimentation, and model lifecycle in the cloud.
-          </p>
-          <ul>
-            <li>Develop services for personalization and experimentation that integrate with customer-facing applications.</li>
-            <li>Support model deployment and lifecycle management, helping data science teams ship reliably to production.</li>
-            <li>Contribute to API and infrastructure improvements that improve scalability and reduce operational cost.</li>
-            <li>Collaborate closely with data scientists to turn models into robust, observable systems for end users.</li>
-            <li>Work primarily with Python, Java, AWS, Terraform, and CI/CD pipelines.</li>
-          </ul>
+    <div class="relative pl-6 sm:pl-8">
+      <!-- Vertical line -->
+      <div class="absolute top-0 left-2 sm:left-3 h-full w-px bg-gradient-to-b from-blue-500/60 via-blue-400/40 to-transparent"></div>
+
+      <!-- Item 1 -->
+      <article class="group mb-12">
+        <div class="flex items-start gap-4">
+          <div class="mt-1 h-4 w-4 rounded-full bg-blue-500 ring-4 ring-blue-500/20 group-hover:scale-110 transition"></div>
+          <div>
+            <h3 class="text-xl font-semibold">Junior Engineer — Sanlam Fintech</h3>
+            <p class="text-sm text-slate-500 dark:text-slate-400">Feb 2025 – Present · Johannesburg · Hybrid</p>
+          </div>
         </div>
-      </li>
-      <li>
-        <div class="time">Sep 2023 – Jan 2025</div>
-        <div class="details">
-          <h3>Junior Developer — Impression Signatures</h3>
-          <p>City of Johannesburg, Gauteng, South Africa · Hybrid</p>
-          <p>
-            Part of the Managed PKI team, building and maintaining public-key infrastructure systems for digital signing.
-          </p>
-          <ul>
-            <li>Contributed to a Certificate Authority system and maintained an existing Registration Authority system.</li>
-            <li>Participated in audit preparation and execution for regulated PKI environments.</li>
-            <li>Leveraged AWS, Python, and Terraform to provision and manage secure infrastructure.</li>
-          </ul>
+        <p class="mt-3 text-slate-600 dark:text-slate-300 max-w-prose">Bridge data science & engineering: personalization, experimentation, model lifecycle, scalable delivery.</p>
+        <ul class="mt-3 space-y-1 text-sm text-slate-600 dark:text-slate-300 list-disc list-inside">
+          <li>Build services powering personalization & experimentation.</li>
+          <li>Support reliable model deployment & lifecycle management.</li>
+          <li>Improve API/infrastructure scalability & cost efficiency.</li>
+          <li>Collaborate with data scientists for observable production systems.</li>
+          <li>Tech: Python · Java · Cloud · Infra as Code · CI/CD.</li>
+        </ul>
+      </article>
+
+      <!-- Item 2 -->
+      <article class="group mb-12">
+        <div class="flex items-start gap-4">
+          <div class="mt-1 h-4 w-4 rounded-full bg-blue-500 ring-4 ring-blue-500/20 group-hover:scale-110 transition"></div>
+          <div>
+            <h3 class="text-xl font-semibold">Junior Developer — Impression Signatures</h3>
+            <p class="text-sm text-slate-500 dark:text-slate-400">Sep 2023 – Jan 2025 · Johannesburg · Hybrid</p>
+          </div>
         </div>
-      </li>
-      <li>
-        <div class="time">Jan 2022 – Aug 2023</div>
-        <div class="details">
-          <h3>Software Engineer — Synthesis Software Technologies</h3>
-          <p>City of Johannesburg, Gauteng, South Africa · Hybrid</p>
-          <p>
-            Worked on a Contract &amp; Container Management system for a large shipping client based in Singapore.
-          </p>
-          <ul>
-            <li>Implemented backend microservices using C# .NET Core for core contract and container workflows.</li>
-            <li>Built and maintained Vue.js components for the web frontend experience.</li>
-            <li>Wrote Kafka producers and consumers to emit and consume events from other microservices.</li>
-          </ul>
+        <p class="mt-3 text-slate-600 dark:text-slate-300 max-w-prose">Managed PKI & secure digital signing systems in regulated environments.</p>
+        <ul class="mt-3 space-y-1 text-sm text-slate-600 dark:text-slate-300 list-disc list-inside">
+          <li>Maintained Certificate & Registration Authority systems.</li>
+          <li>Participated in audit preparation & execution.</li>
+          <li>Provisioned secure infrastructure (Python · Cloud · IaC).</li>
+        </ul>
+      </article>
+
+      <!-- Item 3 -->
+      <article class="group mb-4">
+        <div class="flex items-start gap-4">
+          <div class="mt-1 h-4 w-4 rounded-full bg-blue-500 ring-4 ring-blue-500/20 group-hover:scale-110 transition"></div>
+          <div>
+            <h3 class="text-xl font-semibold">Software Engineer — Synthesis Software Technologies</h3>
+            <p class="text-sm text-slate-500 dark:text-slate-400">Jan 2022 – Aug 2023 · Johannesburg · Hybrid</p>
+          </div>
         </div>
-      </li>
-    </ol>
+        <p class="mt-3 text-slate-600 dark:text-slate-300 max-w-prose">Contract & container management platform for international shipping operations.</p>
+        <ul class="mt-3 space-y-1 text-sm text-slate-600 dark:text-slate-300 list-disc list-inside">
+          <li>Built microservices (.NET Core) for contract/container flows.</li>
+          <li>Developed Vue.js UI components & interactions.</li>
+          <li>Implemented Kafka event producers & consumers.</li>
+        </ul>
+      </article>
+    </div>
   </section>
 
   <section id="research" class="panel">
