@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mutshidzi Phaswana | Software Developer</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Portfolio of Mutshidzi Phaswana – software developer building performant, accessible web applications.">
+  <meta property="og:title" content="Mutshidzi Phaswana – Portfolio">
+  <meta property="og:description" content="Software developer focused on clean architecture and developer experience.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://MutshidziPhaswana.github.io">
+  <meta property="og:image" content="assets/og-preview.png">
+  <link rel="canonical" href="https://MutshidziPhaswana.github.io">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Mutshidzi Phaswana",
+    "url":"https://MutshidziPhaswana.github.io",
+    "jobTitle":"Software Developer",
+    "sameAs":[
+      "https://github.com/MutshidziPhaswana",
+      "https://www.linkedin.com/in/TODO",
+      "https://twitter.com/TODO"
+    ]
+  }
+  </script>
+</head>
+<body>
+<header class="site-header">
+  <nav class="nav">
+    <a class="logo" href="/" aria-label="Home">MP</a>
+    <button id="themeToggle" aria-label="Toggle dark mode">🌓</button>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <h1>Hi, I'm <span class="accent">Mutshidzi Phaswana</span></h1>
+      <p class="lead">
+        I build reliable, accessible, and performant web applications. Passionate about clean architecture and continuous learning.
+      </p>
+      <div class="cta-group">
+        <a href="#projects" class="btn primary">Projects</a>
+        <a href="#contact" class="btn outline">Contact</a>
+      </div>
+      <div class="social">
+        <a href="https://github.com/MutshidziPhaswana" aria-label="GitHub">GitHub</a>
+        <a href="https://www.linkedin.com/in/TODO" aria-label="LinkedIn">LinkedIn</a>
+        <a href="mailto:TODO@domain.example" aria-label="Email">Email</a>
+      </div>
+    </div>
+    <picture>
+      <img src="assets/profile.jpg" alt="Portrait of Mutshidzi Phaswana" width="260" height="260" loading="lazy">
+    </picture>
+  </section>
+</header>
+
+<main id="main-content">
+  <section id="about" class="panel">
+    <h2>About Me</h2>
+    <p>
+      I'm a software developer focused on building maintainable and scalable applications with a strong emphasis on performance and accessibility.
+    </p>
+    <p>
+      I enjoy exploring new technologies, contributing to open-source, and writing about development best practices.
+    </p>
+  </section>
+
+  <section id="experience" class="panel">
+    <h2>Experience</h2>
+    <ol class="timeline">
+      <li>
+        <div class="time">2024 – Present</div>
+        <div class="details">
+          <h3>Software Developer – TODO Company</h3>
+          <p>Improving frontend performance and internal tooling.</p>
+          <ul>
+            <li>Reduced bundle size by 30% via code-splitting and dynamic imports.</li>
+            <li>Implemented a design token system for brand consistency.</li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <div class="time">2023 – 2024</div>
+        <div class="details">
+          <h3>Freelance Developer</h3>
+          <p>Built full-stack solutions (React, Node.js, PostgreSQL) for SMEs.</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <section id="projects" class="panel">
+    <h2>Projects</h2>
+    <div class="filters">
+      <button data-filter="all" class="active">All</button>
+      <button data-filter="frontend">Frontend</button>
+      <button data-filter="backend">Backend</button>
+      <button data-filter="tooling">Tooling</button>
+    </div>
+    <div class="project-grid" id="projectGrid" aria-live="polite"></div>
+  </section>
+
+  <section id="skills" class="panel">
+    <h2>Skills</h2>
+    <ul class="skills" itemscope itemtype="https://schema.org/ItemList">
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/DefinedTerm"><span itemprop="name">JavaScript (ES2023)</span></li>
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/DefinedTerm"><span itemprop="name">TypeScript</span></li>
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/DefinedTerm"><span itemprop="name">React / Next.js</span></li>
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/DefinedTerm"><span itemprop="name">Node.js / Express</span></li>
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/DefinedTerm"><span itemprop="name">REST & GraphQL</span></li>
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/DefinedTerm"><span itemprop="name">PostgreSQL / MongoDB</span></li>
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/DefinedTerm"><span itemprop="name">Testing (Jest, Playwright)</span></li>
+    </ul>
+  </section>
+
+  <section id="contact" class="panel">
+    <h2>Contact</h2>
+    <p>Feel free to reach out for collaboration or opportunities.</p>
+    <form id="contactForm" action="https://formspree.io/f/TODO" method="POST">
+      <label>
+        <span>Name</span>
+        <input name="name" required autocomplete="name">
+      </label>
+      <label>
+        <span>Email</span>
+        <input type="email" name="email" required autocomplete="email">
+      </label>
+      <label>
+        <span>Message</span>
+        <textarea name="message" rows="5" required></textarea>
+      </label>
+      <button type="submit" class="btn primary">Send</button>
+      <p class="form-status" aria-live="polite"></p>
+    </form>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>&copy; <span id="year"></span> Mutshidzi Phaswana. All rights reserved.</p>
+</footer>
+</body>
+</html>
