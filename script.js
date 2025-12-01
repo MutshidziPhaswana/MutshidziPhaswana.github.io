@@ -118,6 +118,7 @@ function createProjectCard(project) {
 }
 
 function renderProjects(filter = 'all') {
+  if (!projectGrid) return;
   projectGrid.innerHTML = '';
   
   const filteredProjects = filter === 'all' 
@@ -129,8 +130,10 @@ function renderProjects(filter = 'all') {
   });
 }
 
-// Initial render
-renderProjects();
+// Initial render (only if Projects section exists)
+if (projectGrid) {
+  renderProjects();
+}
 
 // Populate research grid with research-only items
 const researchGrid = document.getElementById('researchGrid');
@@ -141,18 +144,19 @@ if (researchGrid) {
 
 // Filter Projects
 const filterButtons = document.querySelectorAll('.filters button');
-
-filterButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    // Update active state
-    filterButtons.forEach(btn => btn.classList.remove('active'));
-    button.classList.add('active');
-    
-    // Filter projects
-    const filter = button.getAttribute('data-filter');
-    renderProjects(filter);
+if (filterButtons.length) {
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      // Update active state
+      filterButtons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+      
+      // Filter projects
+      const filter = button.getAttribute('data-filter');
+      renderProjects(filter);
+    });
   });
-});
+}
 
 // Contact Form
 const contactForm = document.getElementById('contactForm');
